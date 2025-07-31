@@ -154,7 +154,7 @@ def main():
     
     #=============================================================================#
     # 학습된 모델 가중치 로드
-    pretrained_path = ('C:/Users/Evan/OneDrive/바탕 화면/VScode/[1st]train/[EfficientNet_transfer]trained_efficientnet_model_best_epoch_47_Loss_0.0323.pth')
+    pretrained_path = ('C:/Users/Evan/OneDrive/바탕 화면/VScode/[1st]train/[EfficientNet]trained_efficientnet_model_best_epoch_44_Loss_0.0328.pth')
     if os.path.exists(pretrained_path):
         model.load_state_dict(torch.load(pretrained_path, map_location=device))
         print(f"사전 학습된 모델이 {pretrained_path}에서 성공적으로 로드되었습니다.")

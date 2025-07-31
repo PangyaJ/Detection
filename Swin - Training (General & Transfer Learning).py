@@ -65,10 +65,11 @@ def get_transforms():
 def get_swin(num_classes):
     model = timm.create_model('swin_base_patch4_window7_224', pretrained=True)
     num_features = model.head.in_features
-    model.head = nn.Sequential(
-        nn.Dropout(p=0.2),
-        nn.Linear(num_features, num_classes)
-    )
+    num_classes = num_classes
+    # model.head = nn.Sequential(
+    #     nn.Dropout(p=0.2),
+    #     nn.Linear(num_features, num_classes)
+    # )
     return model
 
 # 폴더 선택 함수

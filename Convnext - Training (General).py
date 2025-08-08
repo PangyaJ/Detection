@@ -152,7 +152,7 @@ def main():
     
     model = get_convnext(num_classes).to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.01)
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
     
     save_path = "trained_convnext_model"
     

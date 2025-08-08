@@ -156,7 +156,7 @@ def main():
     
     #=============================================================================#
     # 학습된 모델 가중치 로드
-    pretrained_path = ('C:/Users/Evan/OneDrive/바탕 화면/VScode/[1st]train/[EfficientNet]trained_efficientnet_model_best_epoch_38_Loss_0.4180.pth')
+    pretrained_path = ('C:/Users/Evan/OneDrive/바탕 화면/VScode/[1st]train/[swin]trained_swin_model_best_epoch_5_Loss_0.8158.pth')
     if os.path.exists(pretrained_path):
         model.load_state_dict(torch.load(pretrained_path, map_location=device))
         print(f"사전 학습된 모델이 {pretrained_path}에서 성공적으로 로드되었습니다.")
@@ -166,7 +166,7 @@ def main():
     #=============================================================================#
     
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.001)
+    optimizer = optim.Adam(model.parameters(), lr=0.0001)
     #optimizer = optim.SGD(model.parameters(), lr=0.001)
     
     save_path = "trained_swin_model"

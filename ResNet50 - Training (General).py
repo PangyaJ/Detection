@@ -149,7 +149,7 @@ def main():
     
     model = get_resnet50(num_classes).to(device)
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.Adam(model.parameters(), lr=0.01)
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
     
     save_path = "trained_resnet50_model"
     
